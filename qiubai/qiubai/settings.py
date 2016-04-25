@@ -46,7 +46,11 @@ DOWNLOAD_DELAY=1
 #SPIDER_MIDDLEWARES = {
 #    'qiubai.middlewares.MyCustomSpiderMiddleware': 543,
 #}
-
+ITEM_PIPELINES = {
+    'qiubai.pipelines.MongoPipeline':300
+}
+MONGO_URI = "127.0.0.1:27017"
+MONGO_DATABASE = "qiubai"
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
